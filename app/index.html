@@ -1,0 +1,107 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Leet App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/foundation/css/foundation.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="row">
+      <div class="small-12 large-12 columns">
+        <h1>Leet <small>Encoder/Decoder</small></h1>
+         <span class="warning label">R.I</span>
+      </div>
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="small-12 columns">
+         <ul class="tabs" data-tab role="tablist">
+              <li class="tab-title active" role="presentational" ><a href="#panel2-1" role="tab" tabindex="0" aria-selected="true" controls="panel2-1">Encoder/Decoder</a></li>
+              <li class="tab-title" role="presentational" ><a href="#panel2-2" role="tab" tabindex="0"aria-selected="false" controls="panel2-2">Table</a></li>
+              <li class="tab-title" role="presentational"><a href="#panel2-3" role="tab" tabindex="0" aria-selected="false" controls="panel2-3">Tab 3</a></li>
+              <li class="tab-title" role="presentational" ><a href="#panel2-4" role="tab" tabindex="0" aria-selected="false" controls="panel2-4">Tab 4</a></li>
+            </ul>
+            <div class="tabs-content">
+              <section role="tabpanel" aria-hidden="false" class="content active" id="panel2-1">
+                  <form>
+                    <div class="row">
+                        <div class="small-12 columns">
+                           <label>Standard Text
+                              	<input type="text" id="normal-text" placeholder="type here..." />
+                           </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 columns">
+                          
+                           <label>Leet Text 
+                              	<span class="alert label">Not ready, do not use</span>
+                                <input type="text" id="leet-text" placeholder="type here..." />
+                           </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 columns">
+                          <button>Reset</button>
+                        </div>
+                    </div>
+                 </form>
+              </section>
+              <section role="tabpanel" aria-hidden="true" class="content" id="panel2-2">
+                <div class="row">
+                    <div class="small-12 columns">
+                      <div class="panel callout radius">
+    	                   <h5>Leet Table</h5>
+                              <pre>
+                                   table:[
+                                       {},
+                                       {}
+                                   ]
+                              </pre>
+                        </div>
+                    </div>
+                </div>
+              </section>
+              <section role="tabpanel" aria-hidden="true" class="content" id="panel2-3">
+                <h2>Third panel content goes here...</h2>
+              </section>
+              <section role="tabpanel" aria-hidden="true" class="content" id="panel2-4">
+                <h2>Fourth panel content goes here...</h2>
+              </section>
+            </div>
+      </div>
+    </div>
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
+    <script src="bower_components/jquery-placeholder/jquery.placeholder.js"></script>
+    <script src="bower_components/foundation/js/foundation.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    
+
+        <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/leet.js"></script>
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
