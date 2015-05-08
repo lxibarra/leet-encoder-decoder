@@ -1,3 +1,4 @@
+/// <reference path="../../typings/jquery/jquery.d.ts"/>
 $(function() {
 	$(document).foundation();
 	
@@ -11,9 +12,13 @@ $(function() {
 		var context = $(this);
 		clearTimeout(timeoutid);
     	timeoutid = setTimeout(function() {
-        $('#normal-text').val(leet.ToNormal(context.val()));
-    }, 1000);
-		
+        	$('#normal-text').val(leet.ToNormal(context.val())); 
+		}, 1000);
 	});
+	
+	$('#leetJson').html(JSON.stringify(leet.getLeetTable(), ' ', '\t'));
+	
+	$('#leetTable tbody').append(DoTable(leet.getLeetTable(), 3));
+	
 	
 });

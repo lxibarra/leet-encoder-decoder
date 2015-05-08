@@ -32,9 +32,8 @@
          <ul class="tabs" data-tab role="tablist">
               <li class="tab-title active" role="presentational" ><a href="#panel2-1" role="tab" tabindex="0" aria-selected="true" controls="panel2-1">Encoder/Decoder</a></li>
               <li class="tab-title" role="presentational" ><a href="#panel2-2" role="tab" tabindex="0"aria-selected="false" controls="panel2-2">Table</a></li>
-              <li class="tab-title" role="presentational"><a href="#panel2-3" role="tab" tabindex="0" aria-selected="false" controls="panel2-3">Tab 3</a></li>
-              <li class="tab-title" role="presentational" ><a href="#panel2-4" role="tab" tabindex="0" aria-selected="false" controls="panel2-4">Tab 4</a></li>
-            </ul>
+              <li class="tab-title" role="presentational" ><a href="#panel2-3" role="tab" tabindex="0"aria-selected="false" controls="panel2-3">JSON</a></li>
+         </ul>
             <div class="tabs-content">
               <section role="tabpanel" aria-hidden="false" class="content active" id="panel2-1">
                   <form>
@@ -47,16 +46,15 @@
                     </div>
                     <div class="row">
                         <div class="small-12 columns">
-                          
                            <label>Leet Text 
-                              	<span class="alert label">Not ready, do not use</span>
+                              	<span class="warning label">Beta</span>
                                 <input type="text" id="leet-text" placeholder="type here..." />
                            </label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="small-12 columns">
-                          <button>Reset</button>
+                            <input type="reset" class="button"></input>
                         </div>
                     </div>
                  </form>
@@ -64,23 +62,35 @@
               <section role="tabpanel" aria-hidden="true" class="content" id="panel2-2">
                 <div class="row">
                     <div class="small-12 columns">
-                      <div class="panel callout radius">
-    	                   <h5>Leet Table</h5>
-                              <pre>
-                                   table:[
-                                       {},
-                                       {}
-                                   ]
-                              </pre>
-                        </div>
+                      <h3>Leet Table</h3>
+                      <p>You may replace the Leet Table using your own symbols. Just make sure is valid Json and that contains all letters a-z</p>
+                       <table id="leetTable">
+                          <thead>
+                            <tr>
+                              <th>Letter</th>
+                              <th>Values</th>
+                              <th>Letter</th>
+                              <th>Values</th>
+                              <th>Letter</th>
+                              <th>Values</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                          </tbody>
+                         </table>
+                     
                     </div>
                 </div>
               </section>
-              <section role="tabpanel" aria-hidden="true" class="content" id="panel2-3">
-                <h2>Third panel content goes here...</h2>
-              </section>
-              <section role="tabpanel" aria-hidden="true" class="content" id="panel2-4">
-                <h2>Fourth panel content goes here...</h2>
+            	<section role="tabpanel" aria-hidden="true" class="content" id="panel2-3">
+                <div class="row">
+                    <div class="small-12 columns">
+                         <div class="panel callout radius">
+    	                   <h4>Symbol Definition</h5>
+                           <pre id="leetJson"></pre>
+                        </div>
+                    </div>
+                </div>
               </section>
             </div>
       </div>
@@ -100,6 +110,7 @@
     
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/Utils.js"></script>
         <script src="scripts/leet.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
