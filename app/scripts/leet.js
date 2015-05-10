@@ -46,6 +46,11 @@ function Leet() {
         return leetTable;  
     };
     
+    this.setLeetTable = function(Jsontable) {
+        leetTable = Jsontable;
+        LCMaxLength = MaxDictionaryLength();  
+    };
+    
     //this is necessary in the case of LeetTable changes
     function MaxDictionaryLength() {
         var tmpmax = 0;
