@@ -23,7 +23,6 @@
     <div class="row">
       <div class="small-12 large-12 columns">
         <h1>Leet <small>Encoder/Decoder</small></h1>
-         <span class="warning label">R.I</span>
       </div>
     </div>
     <hr/>
@@ -39,6 +38,13 @@
                   <form>
                     <div class="row">
                         <div class="small-12 columns">
+                           <label>Symbol definition
+                              	<select id="tablecell"></select>
+                           </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 columns">
                            <label>Standard Text
                               	<input type="text" id="normal-text" placeholder="type here..." />
                            </label>
@@ -46,8 +52,7 @@
                     </div>
                     <div class="row">
                         <div class="small-12 columns">
-                           <label>Leet Text 
-                              	<span class="warning label">Beta</span>
+                           <label>Leet Text
                                 <input type="text" id="leet-text" placeholder="type here..." />
                            </label>
                         </div>
@@ -95,6 +100,11 @@
             </div>
       </div>
     </div>
+    <div class="row">
+      <div class="small-12 columns">
+          <hr/>
+      </div>
+    </div>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
@@ -111,7 +121,8 @@
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/Utils.js"></script>
-        <script src="scripts/leet.js"></script>
+        <script src="scripts/leetTables.js"></script>  
+        <script src="scripts/leetConversion.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>

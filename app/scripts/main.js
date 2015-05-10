@@ -2,7 +2,17 @@
 $(function() {
 	$(document).foundation();
 	
+	LeetTables.forEach(function(t, i) {
+		$('#tablecell').append('<option value="' + i + '">' + t.name + '</option>');
+	});
+	
+	$('#tablecell').on('change', function () {
+		leet.setLeetTable(LeetTables[$(this).val()].table);
+		showTable();
+	});
+	
 	var leet = new Leet();
+	leet.setLeetTable(LeetTables[0].table);		
 	var timeoutid;
 	$('#normal-text').on('keyup', function() {
 		$('#leet-text').val(leet.ToLeet($(this).val()));
@@ -16,9 +26,15 @@ $(function() {
 		}, 1000);
 	});
 	
-	$('#leetJson').html(JSON.stringify(leet.getLeetTable(), ' ', '\t'));
+	$('#leetJson').html(JSON.stringify(LeetTables, ' ', '\t'));
 	
-	$('#leetTable tbody').append(DoTable(leet.getLeetTable(), 3));
+	var showTable = function() {
+		$('#leetTable tbody').html(DoTable(leet.getLeetTable(), 3));
+		return this;
+	};
+	
+	showTable();
+	
 	
 	
 });
